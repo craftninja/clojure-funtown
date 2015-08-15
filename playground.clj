@@ -9,3 +9,9 @@
   [subtotal tip-pct number-guests]
   ( / ( total-with-tip subtotal tip-pct ) number-guests )
 )
+
+(defn average
+  "Given a vector of bill amounts, return the average (mean)"
+  [bill-amounts]
+  ( / ( reduce + bill-amounts) (count bill-amounts ) )
+)
