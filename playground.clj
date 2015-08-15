@@ -15,3 +15,9 @@
   [bill-amounts]
   ( / ( reduce + bill-amounts) (count bill-amounts ) )
 )
+
+(defn format-name
+  "Given a first and last name, return \"Last, First\""
+  [first-name last-name]
+  ( str last-name ", " first-name )
+)
