@@ -21,3 +21,25 @@
   [first-name last-name]
   ( str last-name ", " first-name )
 )
+
+(def branwyn
+  {
+    :first-name "Branwyn"
+    :last-name "Platzer"
+  }
+)
+
+(def people
+  [
+    {:first-name "Emily"  :middle-name "Kristen"  :last-name "Platzer"}
+    {:first-name "Luke"   :middle-name "Austin"   :last-name "Bartel"}
+    {:first-name "Little" :middle-name "Kitten" :last-name "Platzer Bartel"}
+  ]
+)
+
+(defn get-names
+  [names]
+  (map (fn [name]
+    (str (get name :first-name) " " (get name :middle-name) " " (get name :last-name))
+  ) names)
+)
